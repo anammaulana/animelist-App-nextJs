@@ -6,10 +6,17 @@ const InputSearch = () => {
   const searchRef = useRef()
   const router = useRouter()
   const handleSearch = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" || event.type === "click") {
       event.preventDefault();
       const keyword = searchRef.current.value;
-      router.push(`/search/${keyword}`)
+
+      // Check if the keyword is empty
+      if (keyword.trim() === "") {
+        // Handle empty input (e.g., show an error message or prevent navigation)
+        alert("Please enter a search keyword.");
+        return;
+      }
+      router.push(`/search/${keyword}`);
     }
   }
     return (
