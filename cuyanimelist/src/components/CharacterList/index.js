@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const AnimeList = ({ api }) => {
+const CharacterList = ({ api }) => {
   return (
     <>
       <div className="grid md:grid-cols-4 sm:grid-cols-3  grid-cols-2 gap-4 px-4">
@@ -15,15 +15,10 @@ const AnimeList = ({ api }) => {
                 height={350}
                 className="w-full max-h-64 object-cover"
               />
+              <h3 className="font-bold md:text-xl text-md p-4">{anime.name}</h3>
               <h3 className="font-bold md:text-xl text-md p-4">
-               {anime.title}
+               Fav:  {anime.favorites}
               </h3>
-              {/* <h4 className="font-bold md:text-xl text-md p-2">
-                Source : {anime.source}
-              </h4>
-              <p className="font-bold md:text-xl text-md p-2">
-                Rating : {anime.score}
-              </p> */}
             </Link>
           );
         })}
@@ -32,4 +27,4 @@ const AnimeList = ({ api }) => {
   );
 };
 
-export default AnimeList;
+export default CharacterList;
