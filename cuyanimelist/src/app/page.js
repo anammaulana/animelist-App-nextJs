@@ -32,7 +32,7 @@ const Page = async () => {
         <AnimeList api={topAnime} />
       </section>
 
-      <section>
+      {/* <section>
         <Header
           title="Character Paling Populer"
           linkHref="/character"
@@ -48,7 +48,7 @@ const Page = async () => {
           linkTitle="Lihat Semua"
         />
         <PeopleList api={topPeople} />
-      </section>
+      </section> */}
     </>
   );
 };

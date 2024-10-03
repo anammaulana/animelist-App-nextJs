@@ -28,9 +28,13 @@ const PeopleList = ({ api }) => {
               </Link>
             )
           )}
-        {!api.data && <p>Loading...</p>}{" "}
-        {/* Display loading message if no data */}
       </div>
+        {!api.data && (
+          <div className="min-h-screen max-w-xl mx-auto flex items-center justify-center gap-4">
+            <div className="loading text-color-accent"></div>
+          </div>
+        )}{" "}
+        {/* Display loading message if no data */}
     </>
   );
 };
